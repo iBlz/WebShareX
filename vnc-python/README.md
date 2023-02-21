@@ -10,3 +10,4 @@
 #### To use
 - Change the ips in the html file and app and vnc python file
 - Change the monitor number
+- Install any missing libraries
