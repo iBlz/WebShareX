@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="refresh" content="120">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="http://10.42.0.86/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="/eel.js"></script>
+    <style>
+        body {
+          background-color: black;
+        }
+      </style>
+</head>
+<body>
+<div class="container jumbotron">
+    <img src="" class="img-fluid" id="screen" tabindex="0" ondragstart="return false" onselectstart="return false">
+</div>
+    <script>
+        function updateScreen(imageString)
+        {
+            $("#screen").attr("src", `data:image/png;base64,${imageString}`);
+        }
+        $(document).ready(function() {
+            eel.expose(updateScreen);
+        });
+    </script>
+</body>
+</html>
